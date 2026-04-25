@@ -9,7 +9,6 @@ export default function Footer() {
                     {/* Brand Section */}
                     <div className="col-span-1 md:col-span-1">
                         <Link to="/" className="font-black text-2xl tracking-tighter text-foreground flex items-center gap-2 uppercase mb-6">
-                            <Monitor className="w-8 h-8 text-primary" />
                             <span>Addix</span>
                         </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed mb-6 font-medium">
