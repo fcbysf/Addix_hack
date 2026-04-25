@@ -7,9 +7,9 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     
     const [user, setUser] = useState({
-        first_name: "John",
-        last_name: "Doe",
-        email: "john@example.com",
+        first_name: "Jean",
+        last_name: "Dupont",
+        email: "jean@example.com",
         role: "admin"
     });
 
@@ -23,14 +23,13 @@ export default function Navbar() {
             <div className="bg-card/90 backdrop-blur-xl border border-border rounded-full px-6 py-2 flex items-center justify-between shadow-2xl ring-1 ring-primary/5">
                 <div className="flex items-center gap-8">
                     <Link to="/" className="font-black text-2xl tracking-tighter text-primary flex items-center gap-2 hover:scale-105 transition-all uppercase group">
-
                         <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Addix</span>
                     </Link>
                     
                     <nav className="hidden md:flex items-center gap-6 text-[10px] font-black tracking-[0.2em] text-muted-foreground uppercase">
-                        <Link to="/dashboard" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Dashboard</Link>
-                        {user && <Link to="/requests" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Requests</Link>}
-                        <Link to="/community" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Community</Link>
+                        <Link to="/" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Accueil</Link>
+                        {user && <Link to="/requests" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Demandes</Link>}
+                        <Link to="/community" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Communauté</Link>
                     </nav>
                 </div>
 
@@ -64,17 +63,17 @@ export default function Navbar() {
                                             <div className="grid gap-1">
                                                 <Link to="/profile" className="flex items-center gap-3 px-4 py-2.5 text-[10px] font-black text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-2xl transition-all uppercase tracking-widest">
                                                     <Settings className="w-4 h-4" />
-                                                    Profile Settings
+                                                    Paramètres du Profil
                                                 </Link>
                                                 <Link to="/orders" className="flex items-center gap-3 px-4 py-2.5 text-[10px] font-black text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-2xl transition-all uppercase tracking-widest">
                                                     <Package className="w-4 h-4" />
-                                                    My Requests
+                                                    Mes Demandes
                                                 </Link>
                                                 
                                                 {user.role === 'admin' && (
                                                     <Link to="/admin" className="flex items-center gap-3 px-4 py-2.5 text-[10px] font-black text-primary bg-primary/5 border border-primary/10 rounded-2xl transition-all uppercase tracking-widest mt-1">
                                                         <Monitor className="w-4 h-4" />
-                                                        Admin Panel
+                                                        Panneau d'administration
                                                     </Link>
                                                 )}
                                             </div>
@@ -86,7 +85,7 @@ export default function Navbar() {
                                                 className="w-full flex items-center gap-3 px-4 py-2.5 text-[10px] font-black text-red-500 hover:bg-red-500 hover:text-white rounded-2xl transition-all uppercase tracking-widest"
                                             >
                                                 <LogOut className="w-4 h-4" />
-                                                Sign Out
+                                                Se déconnecter
                                             </button>
                                         </div>
                                     </>
@@ -95,8 +94,8 @@ export default function Navbar() {
                         </div>
                     ) : (
                         <div className="flex items-center gap-2 ml-2">
-                            <Link to="/login" className="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 hover:text-primary transition-colors">Login</Link>
-                            <Link to="/register" className="bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] px-8 py-3 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95 shadow-md">Get Started</Link>
+                            <Link to="/login" className="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 hover:text-primary transition-colors">Connexion</Link>
+                            <Link to="/register" className="bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] px-8 py-3 rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95 shadow-md">Commencer</Link>
                         </div>
                     )}
                 </div>

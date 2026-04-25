@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Monitor, Mail, Phone, MapPin } from "lucide-react";
+import { Monitor, Mail, Phone, MapPin, Send, Share2, Code, Heart } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -13,46 +13,47 @@ export default function Footer() {
                             <span>Addix</span>
                         </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed mb-6 font-medium">
-                            Empowering individuals on their journey to recovery. Our platform provides the tools, community, and support needed to overcome addiction and reclaim your life.
+                            Accompagner chaque personne dans son parcours de rétablissement. Notre plateforme fournit les outils, la communauté et le soutien nécessaires pour surmonter l'addiction et reprendre sa vie en main.
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 group">
-                                <Twitter className="w-4 h-4" />
+                                <Send className="w-4 h-4" />
                             </a>
                             <a href="#" className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 group">
-                                <Linkedin className="w-4 h-4" />
+                                <Share2 className="w-4 h-4" />
                             </a>
                             <a href="#" className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 group">
-                                <Github className="w-4 h-4" />
+                                <Code className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="font-bold text-xs uppercase tracking-widest text-foreground mb-6">Resources</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-widest text-foreground mb-6">Ressources</h3>
                         <ul className="space-y-4">
-                            <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Dashboard</Link></li>
-                            <li><Link to="/requests" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Support Requests</Link></li>
-                            <li><Link to="/community" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Community Forum</Link></li>
-                            <li><Link to="/blog" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Recovery Blog</Link></li>
+                            <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Tableau de bord</Link></li>
+                            <li><Link to="/requests" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Demandes de soutien</Link></li>
+                            <li><Link to="/community" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Forum communautaire</Link></li>
+                            <li><Link to="/reviews" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Histoires de succès</Link></li>
+                            <li><Link to="/blog" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Blog de rétablissement</Link></li>
                         </ul>
                     </div>
 
                     {/* Support */}
                     <div>
-                        <h3 className="font-bold text-xs uppercase tracking-widest text-foreground mb-6">Help & Support</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-widest text-foreground mb-6">Aide & Soutien</h3>
                         <ul className="space-y-4">
-                            <li><Link to="/contact" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Contact Us</Link></li>
-                            <li><Link to="/faq" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">FAQs</Link></li>
-                            <li><Link to="/privacy" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Privacy Policy</Link></li>
-                            <li><Link to="/terms" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Terms of Service</Link></li>
+                            <li><Link to="/contact" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Contactez-nous</Link></li>
+                            <li><Link to="/#faq" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">FAQs</Link></li>
+                            <li><Link to="/privacy" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Politique de confidentialité</Link></li>
+                            <li><Link to="/terms" className="text-muted-foreground hover:text-primary text-sm font-bold transition-colors">Conditions d'utilisation</Link></li>
                         </ul>
                     </div>
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="font-bold text-xs uppercase tracking-widest text-foreground mb-6">Get in Touch</h3>
+                        <h3 className="font-bold text-xs uppercase tracking-widest text-foreground mb-6">Contact</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-muted-foreground">
                                 <MapPin className="w-5 h-5 text-primary shrink-0" />
@@ -72,12 +73,12 @@ export default function Footer() {
 
                 <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-muted-foreground text-xs font-bold uppercase tracking-widest opacity-60">
-                        © {new Date().getFullYear()} ADDIX SOLUTIONS. ALL RIGHTS RESERVED.
+                        © {new Date().getFullYear()} ADDIX SOLUTIONS. TOUS DROITS RÉSERVÉS.
                     </p>
                     <div className="flex items-center gap-2 text-muted-foreground text-xs font-bold uppercase tracking-widest opacity-80">
-                        <span>Made with</span>
+                        <span>Fait avec</span>
                         <Heart className="w-3 h-3 text-red-500 fill-red-500" />
-                        <span>for a better world</span>
+                        <span>pour un monde meilleur</span>
                     </div>
                 </div>
             </div>

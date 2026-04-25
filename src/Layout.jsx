@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
                     dotSize={6}
                     gap={35}
                     baseColor="#e0e0e0"
-                    activeColor="#3A7BD5"
+                    activeColor="#462C7D"
                     proximity={200}
                     shockRadius={300}
                     shockStrength={4}
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
             <main className="relative z-10 w-full h-full pt-24 min-h-[calc(100vh-200px)]">
                 {children}
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </div>
             </>
     )
